@@ -1,16 +1,22 @@
 {% extends 'core/base.html' %}
 
-{% block content %}
-<div class="px-6  text-gray-800 text-center rounded m-6 bg-gray-200">
-    <h1><b>Maringo sports club</b></h1>
+{% block title %} <title>Home | Welcome</title> {% endblock %}
 
-<div class="flex py-2">
-    <img src="/" alt="a photo" class="rounded-xl" height="200" width="200">
-    
-    <div>
-        <h1 class="px-2 py-1 ml-5 rounded text-white bg-red-600">About us</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint fugiat nisi laudantium dolore aliquam minima ratione optio illum, sunt laborum possimus accusantium nesciunt blanditiis molestiae tenetur, quis perspiciatis. Inventore, molestiae?</p>
+{% block content %}
+<div class="m-6 px-6 py-12 bg-gray-100 rounded-xl">
+    <h2 class="mb-12 text-2xl text-center">Sports</h2>
+
+    <div class="grid grid-cols-3 gap-3">
+        {% for sport in sports %}
+                    <div>
+                        <img src="{{ sport.passport.url }}" alt="I feel better" class="rounded-t-xl">
+
+                    <div class="p-6 bg-white text-center rounded-b-xl">
+                        <h2 class="text-2xl">{{ sport.name }}</h2>
+                        <p class="text-gray-500">{{ sport.description }}</p>
+                    </div>
+                </div>
+        {% endfor %}
     </div>
-</div>
 </div>
 {% endblock %}

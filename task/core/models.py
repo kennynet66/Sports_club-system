@@ -33,8 +33,8 @@ class Member_details(models.Model):
         default=None,
         )
     school_of_origin = models.CharField(max_length = 20)
-    weight = models.FloatField(default=0)
-    height = models.FloatField(default=0)
+    weight = models.FloatField(default=50)
+    height = models.FloatField(default=50)
     special_needs = models.BooleanField(default=False, blank=True, null=True)
     specify = models.CharField(max_length=200, blank=True, null=True)
     passport = models.ImageField (upload_to="passports", blank=True, null=True)
@@ -48,7 +48,7 @@ class Member_details(models.Model):
     
 class Sports_details(models.Model):
     name = models.CharField(max_length=200)
-    passport = models.ImageField(upload_to="sport_photos", blank=True, null=True)
+    passport = models.ImageField(upload_to="sporty", blank=True, null=True)
     description = models.TextField(null=True, blank=True)
 
     class Meta:

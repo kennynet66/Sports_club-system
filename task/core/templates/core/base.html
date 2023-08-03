@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     {% block title %} {% endblock %}
 </head>
-<body class="bg-gray-400">
+<body>
 <div class="flex flex-col min-h-screen">
     <nav class="p-6 justify-between text-white flex text-center bg-gray-800">
 
         {% if request.user.is_authenticated %}
-            <a href="#"><b>| Home |</b></a>
+            <a href="{% url 'core:index' %}"><b>| Home |</b></a>
         {% else %}
             <a href="/"><b>| Sports club |</b></a>
         {% endif %}
 
         {% if request.user.is_authenticated %}
         <div>
-            <a href="{% url 'core:logout' %}" class="bg-red-500 w-auto rounded p-2">Logout</a>
+            <a href="{% url 'core:patrons' %}" class="mr-4"><b>Patrons</b></a>
+            <a href="{% url 'core:logout' %}" class="bg-red-500 mr-4 rounded p-2">Logout</a>
             <a href="#" class="bg-yellow-500 w-auto rounded p-2">Donate</a>
         </div>
         {% else %}
