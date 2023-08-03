@@ -1,0 +1,92 @@
+ #MARINGO SPORTS CLUB SYSTEM
+TASK 1 (DATABASE model)
+- Maintain details of club members and their roles
+-What are the details?
+  - Fullname (Firstname, Lastname)
+  - Gender
+  - Name of the next of kin & the relationship (Guardian, Mother, Father)
+  - School of origin
+  - Weight
+  - Height
+  - Special needs(If any specify)
+
+PROGRESS:
+- I created a database model in the models.py to store the necessary data in the task mentioned.
+- I created a new app called 'core' it will be the main app
+- The named the model Member_details
+- I tested it on the admin interface and IT WORKS :)
+
+STATUS:
+  #DONE
+
+TASK 2(DATABASE model)
+(2.1)
+-What are the details of the club?
+  - Name of the sport
+  - Photo of the sport
+  - Short description of the sport
+
+PROGRESS:
+- I created a database model in the models.py in the app 'core' to store the necessary data in this specific task
+- I named the model Sports_details 
+- I tested it on the admin interface and it works :)
+
+STATUS:
+  #DONE
+
+(2.2)
+- Maintain details of sports in the club and their patrons
+- Who are the patrons?
+  - Name of the patron (Firstname & Lastname)
+  - Passport of the patron
+  - Sport which he/she patronises
+  - Brief story about the patron
+
+PROGRESS:
+- I have created a database model to store the data in the task 2.2
+- I named the database model to 'Patron'
+- I tested it on the admin interface and it works :)
+
+STATUS:
+  #DONE
+
+TASK 3(DATABASE model)
+- Maintain records of items in the store
+-What are the items in the store and their price
+  - Bloomer  -  250
+  - Games shorts    -   750
+  - Hockey stick    -   2,000
+  - Socks   -   350
+  - Sports shoes    -   ranging from 1,000 to 4,000
+  - Track suit    -   1,000
+  - T-shirt   -   800
+-Details that need to be captured
+ - name of the item
+ - photo of the item
+ - Price of the item
+ - Stock available for the item
+
+PROGRESS:
+- I have created a database model to store the data in the task 3
+- I named the database model to 'Store'
+- I tested it on the admin interface and it works :)
+
+STATUS:
+  #DONE
+
+TASK 4(DATABASE model)
+-Maintain records of stock levels
+  -Before purchase
+  -After purchase
+
+PROGRESS:
+- Covered in the Task 3
+STATUS:
+  #DONE
+
+
+  SPRINT1{
+    Completed = 4
+    Remaining = 4
+    %Completion = 100%
+  }
