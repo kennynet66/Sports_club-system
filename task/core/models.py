@@ -62,7 +62,7 @@ class Patron(models.Model):
     firstname = models.CharField(max_length=200)
     lastname = models.CharField(max_length=200)
     passport = models.ImageField(upload_to="patron_pic", blank=True, null=True)
-    about = models.TextField(default="write about the patron")
+    about = models.TextField(default="Corrupti a veniam harum unde temporibus quaerat soluta provident, earum impedit voluptates consectetur eveniet voluptatibus vitae hic assumenda delectus, debitis maxime in facere labore beatae quia? Perferendis dolorum impedit eligendi explicabo, commodi qui quia ratione possimus numquam veniam minus maxime dolorum, tempore modi ullam vel, veritatis provident dolores natus aperiam?")
     patron_to = models.ForeignKey(Sports_details, on_delete=models.CASCADE)
 
     class Meta:
