@@ -70,7 +70,7 @@ class Patron(models.Model):
 
     def __str__(self):
         return f"{self.firstname} {self.lastname}"
-    
+
 class Store (models.Model):
     item_name = models.CharField(max_length=200)
     photo = models.ImageField(upload_to="item_photo", blank=True, null=True)

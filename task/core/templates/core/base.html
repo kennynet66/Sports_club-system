@@ -20,6 +20,7 @@
 
         {% if request.user.is_authenticated %}
             <div>
+                <a href="#" class="mr-4"><b>Store items</b></a>
                 <a href="{% url 'core:patrons' %}" class="mr-4"><b>Patrons</b></a>
                 <a href="{% url 'core:logout' %}" class="bg-red-500 mr-4 rounded p-2">Logout</a>
                 <a href="#" class="bg-yellow-500 w-auto rounded p-2">Donate</a>
