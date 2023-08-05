@@ -3,21 +3,23 @@
 {% block title %} <title> mentor | Welcome</title> {% endblock %}
 
 {% block content %}
-    <div class="m-6 px-6 py-12 bg-gray-100 rounded-xl">
+<div class="m-6 px-6 py-12 bg-gray-100 rounded-xl">
     <h2 class="mb-12 text-2xl text-center">Store Items</h2>
 
     <div class="grid grid-cols-3 gap-3">
+        {% for item in items %}
+    <a href ="#">
+        <div>
+            <div class="p-6 bg-white border-t border-red-800 text-center rounded-t-xl">
+                <h2 class="text-2xl">{{ item.item_name }}</h2>
+                <p class="text-gray-500"><b> Price: </b>{{ item.price }}$</p>
+            </div>
 
-{% for item in items %}
-
-    <div>
-        <div class="p-6 bg-white border-t border-red-800 text-center rounded-t-xl">
-            <h2 class="text-2xl">{{ item.item_name }}</h2>
-            <p class="text-gray-500"><b> Price: </b>{{ item.price }}$</p>
+            <div>
+                <img src="{{ item.photo.url }}" alt="I feel better" class="rounded-b-xl">
+            </div>
         </div>
-        <img src="{{ item.photo.url }}" alt="I feel better" class="rounded-b-xl">
-
-    </div>
+    </a>
 
 {% endfor %}
 </div>
