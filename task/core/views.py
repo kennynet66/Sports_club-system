@@ -20,7 +20,11 @@ def patrons(request):
 
 @login_required
 def storage(request):
-    items = Store.objects.all
+    items = Store.objects.all()
     return render (request, 'core/store.html',{
         'items' : items
     })
+
+@login_required
+def member(request):
+    return render (request, 'core/members.html')

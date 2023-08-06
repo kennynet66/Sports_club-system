@@ -20,6 +20,7 @@
 
         {% if request.user.is_authenticated %}
             <div>
+                <a href="{% url 'core:member' %}" class="mr-4"><b>Members</b></a>
                 <a href="{% url 'core:store' %}" class="mr-4"><b>Store items</b></a>
                 <a href="{% url 'core:patrons' %}" class="mr-4"><b>Patrons</b></a>
                 <a href="{% url 'core:logout' %}" class="bg-red-500 mr-4 rounded p-2">Logout</a>
