@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
-from .models import Member_details
+from .models import Member_details, Store
 
 INPUT_CLASSES = 'w-3/4 py-4 px-6 rounded-xl border mr-5 ml-5'
 
@@ -45,3 +45,19 @@ class NewItemForm(forms.ModelForm):
             }),
 
     }
+        
+class NewStoreForm(forms.ModelForm):
+    class Meta:
+        model = Store
+        fields = ('item_name', 'photo', 'price', 'stock_available')
+        widgets = {
+            'item_name' : forms.TextInput(attrs={
+                'class': INPUT_CLASSES
+            }),
+            'photo' : forms.FileInput(attrs={
+                'class': INPUT_CLASSES
+            }),
+            'stock_available' : forms.TextInput(attrs={
+                'class': INPUT_CLASSES
+            }),
+        }

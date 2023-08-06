@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import Sports_details, Patron, Store, Member_details
-from .forms import NewItemForm
+from .forms import NewItemForm, NewStoreForm
 def login(request):
     return render(request, 'core/login.html')
 
@@ -46,4 +46,19 @@ def new(request):
     return render(request, 'core/more.html', {
         'form': form,
         'title': 'New Member',
+    })
+
+@login_required
+def det(request):
+    if request.method == 'POST':
+        form = NewStoreForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            form.save()
+            return redirect(".")
+    else:
+        form = NewStoreForm()
+
+    return render(request,'core/new.html',{
+        'form' : form
     })

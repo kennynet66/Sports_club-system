@@ -6,6 +6,7 @@ from .forms import LoginForm
 app_name= 'core'
 
 urlpatterns =[
+    path('more/',views.det,name='det'),
     path('new/',views.new, name='new'),
     path('members/', views.member, name='member'),
     path('store/', views.storage, name='store'),

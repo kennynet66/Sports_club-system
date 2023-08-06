@@ -3,6 +3,9 @@
 {% block title %} <title> store | Welcome</title> {% endblock %}
 
 {% block content %}
+<div class ="m-6" >
+    <a href="{% url 'core:det' %}" class="bg-teal-500 text-white hover:bg-teal-800 w-auto rounded p-2">New Item</a>
+</div>
 <div class="m-6 px-6 py-12 bg-gray-100 rounded-xl">
     <h2 class="mb-12 text-2xl text-center">Store Items</h2>
 <a href = "#">
@@ -15,7 +18,7 @@
                 </div>
 
                 <div>
-                    <img src="{{ item.photo.url }}" alt="I feel better" class="rounded-b-xl">
+                    <img src="{{ item.photo.url }}" alt="I feel better" class="rounded-b-xl" width ="400" height ="auto" >
                 </div>
             </div>
 
