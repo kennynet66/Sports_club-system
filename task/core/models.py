@@ -32,7 +32,7 @@ class Member_details(models.Model):
         choices = KIN_CHOICES,
         default=None,
         )
-    school_of_origin = models.CharField(max_length = 20)
+    school_of_origin = models.CharField(max_length = 200)
     weight = models.FloatField(default=50)
     height = models.FloatField(default=50)
     special_needs = models.BooleanField(default=False, blank=True, null=True)
