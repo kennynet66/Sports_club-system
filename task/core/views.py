@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
-from .models import Sports_details, Patron, Store
+from .models import Sports_details, Patron, Store, Member_details
 
 def login(request):
     return render(request, 'core/login.html')
@@ -20,7 +20,14 @@ def patrons(request):
 
 @login_required
 def storage(request):
-    items = Store.objects.all
+    items = Store.objects.all()
     return render (request, 'core/store.html',{
         'items' : items
+    })
+
+@login_required
+def member(request):
+    details = Member_details.objects.all()
+    return render (request, 'core/members.html',{
+        'details' : details
     })

@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+
+{% block title %} <title> store | Welcome</title> {% endblock %}
+
+{% block content %}
+<div class="m-6 px-6 py-12 bg-gray-100 rounded-xl">
+    <h2 class="mb-12 text-2xl text-center">Store Items</h2>
+<a href = "#">
+    <div class="grid grid-cols-3 gap-3">
+        {% for details in details %}
+            <div>
+                <div class="p-6 bg-white border-t border-b border-red-800 text-center rounded-t-xl">
+                    <h2 class="text-2xl">{{ details.firstname }} {{ details.lastname }}</h2>
+                    <p class="text-gray-500"><b> Gender: </b>{{ details.gender }}</p>
+                    <p class="text-gray-500"><b> School: </b>{{ details.school_of_origin }}</p>
+                </div>
+
+                <div>
+                    <img src="{{ details.passport.url }}" alt="I feel better" class="rounded-b-xl" width="400" height="auto">
+                </div>
+            </div>
+
+        {% endfor %}
+</div>
+</a>
+</div>
+{% endblock %}
